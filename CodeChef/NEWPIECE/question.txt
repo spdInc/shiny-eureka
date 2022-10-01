@@ -1,1 +1,43 @@
+
+
+Problem
+
+Chef's favorite game is chess. Today, he invented a new piece and wants to see its strengths.
+From a cell (X, Y)(X,Y), the new piece can move to any cell of the chessboard such that its color is different from that of (X, Y)(X,Y).
+The new piece is currently located at cell (A, B)(A,B). Chef wants to calculate the minimum number of steps required to move it to (P, Q)(P,Q).
+Note: A chessboard is an 8 \times 88×8 square board, where the cell at the intersection of the ii-th row and jj-th column is denoted (i, j)(i,j). Cell (i, j)(i,j) is colored white if i+ji+j is even and black if i+ji+j is odd.
+
+Input Format:
+The first line of input contains a single integer T denoting the number of test cases. The description of the test cases follows.
+Each test case consists of a single line of input, containing four space-separated integers A,B,P,Q.
+
+Output Format
+For each test case, output a single line containing one integer - the minimum number of moves taken by the new piece to reach (P,Q) from (A,B).
+
+Constraints:
+
+1 ≤ T ≤ 5000
+1 ≤ A, B, P, Q ≤8
+
+Sample 1:
+
+Input
+3
+1 1 8 8
+5 7 5 8
+3 3 3 3
+
+Output
+2
+1
+0
+
+Explanation:
+
+Test Case 11: (1,1) and (8,8) have the same color, so Chef cannot move the new piece in 11 move. Chef can first move the piece from (1,1) to (8,1) and then from (8,1) to (8,8), thus taking 22 moves.
+
+Test Case 22: (5,7) and (5,8) have different colors, so Chef can move the piece from (5,7) to (5,8) in 11 move.
+
+
+You will find the Problem at:
 https://www.codechef.com/submit/NEWPIECE
