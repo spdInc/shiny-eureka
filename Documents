@@ -1,0 +1,770 @@
+What is Java?
+Java is a high-level, general-purpose, object-oriented, and secure programming language.
+Java is a platform-independent language.
+
+Features of Java
+    1)Simple: Java is a simple language because its syntax is simple, clean, and easy to understand. Complex and ambiguous concepts of C++ are either eliminated or re-implemented in Java. For example, pointer and operator overloading are not used in Java.
+    2)Object-Oriented: In Java, everything is in the form of the object. It means it has some data and behavior. A program must have at least one class and object.
+    3)Robust: Java makes an effort to check error at run time and compile time. It uses a strong memory management system called garbage collector. Exception handling and garbage collection features make it strong.
+    4)Secure: Java is a secure programming language because it has no explicit pointer and programs runs in the virtual machine. Java contains a security manager that defines the access of Java classes.
+    5)Platform-Independent: Java provides a guarantee that code writes once and run anywhere. This byte code is platform-independent and can be run on any machine.
+    6)Multi-threaded: Java also supports multi-threading. It means to handle more than one job a time.
+    
+Java main() method
+The main() is the starting point for JVM to start execution of a Java program. Without the main() method, JVM will not execute the program. The syntax of the main() method is:
+    public: It is an access specifier. We should use a public keyword before the main() method so that JVM can identify the execution point of the program. If we use private, protected, and default before the main() method, it will not be visible to JVM.
+    static: You can make a method static by using the keyword static. We should call the main() method without creating an object. Static methods are the method which invokes without creating the objects, so we do not need any object to call the main() method.
+    void: In Java, every method has the return type. Void keyword acknowledges the compiler that main() method does not return any value.
+    main(): It is a default signature which is predefined in the JVM. It is called by JVM to execute a program line by line and end the execution after completion of this method. We can also overload the main() method.
+    String args[]: The main() method also accepts some data from the user. It accepts a group of strings, which is called a string array. It is used to hold the command line arguments in the form of string values.
+ 
+1st java program:
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+Print Text:
+System.out.print("Hello World!");
+
+You can add as many println() methods as you want.It will add a new line for each method:
+When you are working with text, it must be wrapped inside double quotations marks "".
+If you forget the double quotes, an error occurs.
+
+Print Numbers
+You can also use the println() method to print numbers.
+However, unlike text, we don't put numbers inside double quotes:
+
+System.out.println(3);
+System.out.println(358);
+
+Java Variables
+Variables are containers for storing data values.
+
+In Java, there are different types of variables, for example:
+
+String - stores text, such as "Hello". String values are surrounded by double quotes
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+boolean - stores values with two states: true or false
+
+Declaring (Creating) Variables
+To create a variable, you must specify the type and assign it a value:
+
+Syntax
+type variableName = value;
+Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
+
+To create a variable that should store text, look at the following example:
+
+Example
+Create a variable called name of type String and assign it the value "John":
+
+String name = "John";
+System.out.println(name);
+
+To create a variable that should store a number, look at the following example:
+
+Example
+Create a variable called myNum of type int and assign it the value 15:
+
+int myNum = 15;
+System.out.println(myNum);
+
+You can also declare a variable without assigning the value, and assign the value later:
+
+Example
+int myNum;
+myNum = 15;
+System.out.println(myNum);
+
+Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+
+Example
+Change the value of myNum from 15 to 20:
+
+int myNum = 15;
+myNum = 20;  // myNum is now 20
+System.out.println(myNum);
+
+Final Variables
+If you don't want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as "final" or "constant", which means unchangeable and read-only):
+
+Example
+final int myNum = 15;
+myNum = 20;  // will generate an error: cannot assign a value to a final variable
+
+Other Types
+A demonstration of how to declare variables of other types:
+
+Example
+int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";
+
+Display Variables
+The println() method is often used to display variables.
+
+To combine both text and a variable, use the + character:
+
+Example
+String name = "John";
+System.out.println("Hello " + name);
+
+Identifiers
+All Java variables must be identified with unique names.
+
+These unique names are called identifiers.
+
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+The general rules for naming variables are:
+
+Names can contain letters, digits, underscores, and dollar signs
+Names must begin with a letter
+Names should start with a lowercase letter and it cannot contain whitespace
+Names can also begin with $ and _ (but we will not use it in this tutorial)
+Names are case sensitive ("myVar" and "myvar" are different variables)
+Reserved words (like Java keywords, such as int or boolean) cannot be used as names
+
+Java Data Types
+As explained in the previous chapter, a variable in Java must be a specified data type:
+
+Example
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+
+Java Operators
+Operators are used to perform operations on variables and values.
+Java divides the operators into the following groups:
+
+Arithmetic operators
+Assignment operators
+Comparison operators
+Logical operators
+Bitwise operators
+
+Arithmetic Operators
+Arithmetic operators are used to perform common mathematical operations.
+
+Operator
++	Addition ->	Adds together two values	-> x + y	
+-	Subtraction	-> Subtracts one value from another ->	x - y	
+*	Multiplication -> 	Multiplies two values ->	x * y	
+/	Division ->	Divides one value by another ->	x / y	
+%	Modulus ->	Returns the division remainder ->	x % y	
+++	Increment	 -> Increases the value of a variable by 1 ->	++x	
+--	Decrement ->	Decreases the value of a variable by 1	-> --x
+
+Java Assignment Operators
+Assignment operators are used to assign values to variables.
+In the example below, we use the assignment operator (=) to assign the value 10 to a variable called x:
+Example
+int x = 10;
+
+Java Comparison Operators
+Comparison operators are used to compare two values. This is important in programming, because it helps us to find answers and make decisions.
+
+The return value of a comparison is either true or false. These values are known as Boolean values, and you will learn more about them in the Booleans and If..Else chapter.
+
+In the following example, we use the greater than operator (>) to find out if 5 is greater than 3:
+
+Example
+int x = 5;
+int y = 3;
+System.out.println(x > y); 
+==	-> Equal to	x == y	
+!=	-> Not equal	x != y	
+>	 ->Greater than	x > y	
+<	 -> Less than	x < y	
+>=	-> Greater than or equal to	x >= y	
+<=	 -> Less than or equal to	x <= y
+
+Java Logical Operators
+You can also test for true or false values with logical operators.
+
+Logical operators are used to determine the logic between variables or values:
+
+&& ->	Logical and	Returns true if both statements are true	x < 5 &&  x < 10	
+|| 	-> Logical or	Returns true if one of the statements is true	x < 5 || x < 4	
+!  -> 	Logical not	Reverse the result, returns false if the result is true	!(x < 5 && x < 10)
+
+Java Strings
+Strings are used for storing text.
+
+A String variable contains a collection of characters surrounded by double quotes:
+
+Example
+Create a variable of type String and assign it a value:
+
+String greeting = "Hello";
+
+String Length
+A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example, the length of a string can be found with the length() method:
+
+Example
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("The length of the txt string is: " + txt.length());
+Finding a Character in a String
+The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):
+
+Example
+String txt = "Please locate where 'locate' occurs!";
+System.out.println(txt.indexOf("locate")); 
+
+String Concatenation
+The + operator can be used between strings to combine them. This is called concatenation:
+
+Example
+String firstName = "John";
+String lastName = "Doe";
+System.out.println(firstName + " " + lastName);
+
+Adding Numbers and Strings
+WARNING!
+
+Java uses the + operator for both addition and concatenation.
+
+Numbers are added. Strings are concatenated.
+
+If you add two numbers, the result will be a number:
+
+Example
+int x = 10;
+int y = 20;
+int z = x + y;  // z will be 30 (an integer/number)
+
+If you add a number and a string, the result will be a string concatenation:
+
+Example
+String x = "10";
+int y = 20;
+String z = x + y;  // z will be 1020 (a String)
+
+Java Math
+The Java Math class has many methods that allows you to perform mathematical tasks on numbers.
+
+Math.max(x,y)
+The Math.max(x,y) method can be used to find the highest value of x and y:
+
+Example
+Math.max(5, 10);
+
+Math.min(x,y)
+The Math.min(x,y) method can be used to find the lowest value of x and y:
+
+Example
+Math.min(5, 10);
+
+Math.sqrt(x)
+The Math.sqrt(x) method returns the square root of x:
+
+Example
+Math.sqrt(64);
+
+Java Booleans
+Very often, in programming, you will need a data type that can only have one of two values, like:
+
+YES / NO
+ON / OFF
+TRUE / FALSE
+For this, Java has a boolean data type, which can store true or false values.
+
+Boolean Values
+A boolean type is declared with the boolean keyword and can only take the values true or false:
+
+Example
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // Outputs true
+System.out.println(isFishTasty);   // Outputs false
+
+Java If ... Else
+Java Conditions and If Statements
+Java supports the usual logical conditions from mathematics:
+
+Less than: a < b
+Less than or equal to: a <= b
+Greater than: a > b
+Greater than or equal to: a >= b
+Equal to a == b
+Not Equal to: a != b
+You can use these conditions to perform different actions for different decisions.
+
+Java has the following conditional statements:
+
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+The if Statement
+Use the if statement to specify a block of Java code to be executed if a condition is true.
+
+Syntax
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+
+Example
+if (20 > 18) {
+  System.out.println("20 is greater than 18");
+}
+
+The else Statement
+Use the else statement to specify a block of code to be executed if the condition is false.
+
+Syntax
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+Example
+int time = 20;
+if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."
+The else if Statement
+Use the else if statement to specify a new condition if the first condition is false.
+
+Syntax
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+Example
+int time = 22;
+if (time < 10) {
+  System.out.println("Good morning.");
+} else if (time < 20) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."
+
+Java Switch Statements
+Instead of writing many if..else statements, you can use the switch statement.
+
+The switch statement selects one of many code blocks to be executed:
+
+Syntax
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+This is how it works:
+
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+The break and default keywords are optional, and will be described later in this chapter
+The example below uses the weekday number to calculate the weekday name:
+
+Example
+int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+    break;
+  case 5:
+    System.out.println("Friday");
+    break;
+  case 6:
+    System.out.println("Saturday");
+    break;
+  case 7:
+    System.out.println("Sunday");
+    break;
+}
+// Outputs "Thursday" (day 4)
+
+The break Keyword
+When Java reaches a break keyword, it breaks out of the switch block.
+
+This will stop the execution of more code and case testing inside the block.
+
+When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+
+Loops
+Loops can execute a block of code as long as a specified condition is reached.
+
+Loops are handy because they save time, reduce errors, and they make code more readable.
+
+Java While Loop
+The while loop loops through a block of code as long as a specified condition is true:
+
+Syntax
+while (condition) {
+  // code block to be executed
+}
+In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:
+
+Example
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+Java For Loop
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+
+Syntax
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+
+Statement 2 defines the condition for executing the code block.
+
+Statement 3 is executed (every time) after the code block has been executed.
+
+The example below will print the numbers 0 to 4:
+
+Example
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+For-Each Loop
+There is also a "for-each" loop, which is used exclusively to loop through elements in an array:
+
+Syntax
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+The following example outputs all elements in the cars array, using a "for-each" loop:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+Java Break
+You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.
+
+The break statement can also be used to jump out of a loop.
+
+This example stops the loop when i is equal to 4:
+
+Example
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  System.out.println(i);
+}
+ 
+
+Java Continue
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+This example skips the value of 4:
+
+Example
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    continue;
+  }
+  System.out.println(i);
+}
+ 
+
+Break and Continue in While Loop
+You can also use break and continue in while loops:
+
+Break Example
+int i = 0;
+while (i < 10) {
+  System.out.println(i);
+  i++;
+  if (i == 4) {
+    break;
+  }
+}
+ 
+
+Continue Example
+int i = 0;
+while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  System.out.println(i);
+  i++;
+}
+
+
+Java Arrays
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To declare an array, define the variable type with square brackets:
+
+String[] cars;
+We have now declared a variable that holds an array of strings. To insert values to it, you can place the values in a comma-separated list, inside curly braces:
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+To create an array of integers, you could write:
+
+int[] myNum = {10, 20, 30, 40};
+Access the Elements of an Array
+You can access an array element by referring to the index number.
+
+This statement accesses the value of the first element in cars:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+// Outputs Volvo
+
+Note: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
+
+Change an Array Element
+To change the value of a specific element, refer to the index number:
+
+Example
+cars[0] = "Opel";
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Opel";
+System.out.println(cars[0]);
+// Now outputs Opel instead of Volvo
+
+Array Length
+To find out how many elements an array has, use the length property:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4
+
+Loop Through an Array
+You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.
+
+The following example outputs all elements in the cars array:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+}
+
+Loop Through an Array with For-Each
+There is also a "for-each" loop, which is used exclusively to loop through elements in arrays:
+
+Syntax
+for (type variable : arrayname) {
+  ...
+}
+The following example outputs all elements in the cars array, using a "for-each" loop:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+The example above can be read like this: for each String element (called i - as in index) in cars, print out the value of i.
+
+If you compare the for loop and for-each loop, you will see that the for-each method is easier to write, it does not require a counter (using the length property), and it is more readable.
+
+Multidimensional Arrays
+A multidimensional array is an array of arrays.
+
+To create a two-dimensional array, add each array within its own set of curly braces:
+
+Example
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+myNumbers is now an array with two arrays as its elements.
+
+To access the elements of the myNumbers array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:
+
+Example
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+int x = myNumbers[1][2];
+System.out.println(x); // Outputs 7
+
+We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+  }
+}
+
+Java Methods
+A method is a block of code which only runs when it is called.
+
+You can pass data, known as parameters, into a method.
+
+Methods are used to perform certain actions, and they are also known as functions.
+
+Why use methods? To reuse code: define the code once, and use it many times.
+
+Create a Method
+A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:
+
+Example
+Create a method inside Main:
+
+public class Main {
+  static void myMethod() {
+    // code to be executed
+  }
+}
+
+Java Method Parameters
+Parameters and Arguments
+Information can be passed to methods as parameter. Parameters act as variables inside the method.
+
+Parameters are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.
+
+The following example has a method that takes a String called fname as parameter. When the method is called, we pass along a first name, which is used inside the method to print the full name:
+
+Example
+public class Main {
+  static void myMethod(String fname) {
+    System.out.println(fname + " Refsnes");
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam");
+    myMethod("Jenny");
+    myMethod("Anja");
+  }
+}
+// Liam Refsnes
+// Jenny Refsnes
+// Anja Refsnes
+
+Multiple Parameters
+You can have as many parameters as you like:
+
+Example
+public class Main {
+  static void myMethod(String fname, int age) {
+    System.out.println(fname + " is " + age);
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam", 5);
+    myMethod("Jenny", 8);
+    myMethod("Anja", 31);
+  }
+}
+
+// Liam is 5
+// Jenny is 8
+// Anja is 31
+
+Return Values
+The void keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (such as int, char, etc.) instead of void, and use the return keyword inside the method:
+
+Example
+public class Main {
+  static int myMethod(int x) {
+    return 5 + x;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(myMethod(3));
+  }
+}
+// Outputs 8 (5 + 3)
+
+Java Scope
+In Java, variables are only accessible inside the region they are created. This is called scope.
+
+Method Scope
+Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+
+    // Code here CANNOT use x
+
+    int x = 100;
+
+    // Code here can use x
+    System.out.println(x);
+  }
+}
+
+Block Scope
+A block of code refers to all of the code between curly braces {}.
+
+Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+
+    // Code here CANNOT use x
+
+    { // This is a block
+
+      // Code here CANNOT use x
+
+      int x = 100;
+
+      // Code here CAN use x
+      System.out.println(x);
+
+   } // The block ends here
+
+  // Code here CANNOT use x
+
+  }
+}
+
+A block of code may exist on its own or it can belong to an if, while or for statement. In the case of for statements, variables declared in the statement itself are also available inside the block's scope.
+
+
+
+
+
+
+
+
+
+
+
+
