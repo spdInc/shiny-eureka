@@ -1,0 +1,116 @@
+Simple pyramid pattern
+
+import java.io.*;
+
+// Java code to demonstrate star patterns
+public class pattern
+{
+	// Function to demonstrate printing pattern
+	public static void printStars(int n)
+	{
+		int i, j;
+
+		// outer loop to handle number of rows
+		// n in this case
+		for(i=0; i<n; i++)
+		{
+
+			// inner loop to handle number of columns
+			// values changing acc. to outer loop 
+			for(j=0; j<=i; j++)
+			{
+				// printing stars
+				System.out.print("* ");
+			}
+
+			// ending line after each row
+			System.out.println();
+		}
+}
+
+	// Driver Function
+	public static void main(String args[])
+	{
+		int n = 5;
+		printStars(n);
+	}
+}
+Output
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+//After rotation
+import java.io.*;
+
+// Java code to demonstrate star pattern
+public class rotaion
+{
+	// Function to demonstrate printing pattern
+	public static void printStars(int n)
+	{
+		int i, j;
+
+		// outer loop to handle number of rows
+		// n in this case
+		for(i=0; i<n; i++)
+		{
+
+			// inner loop to handle number spaces
+			// values changing acc. to requirement
+			for(j=2*(n-i); j>=0; j--)
+			{
+				// printing spaces
+				System.out.print(" ");
+			}
+			
+			// inner loop to handle number of columns
+			// values changing acc. to outer loop
+			for(j=0; j<=i; j++)
+			{
+				// printing stars
+				System.out.print("* ");
+			}
+			
+			// ending line after each row
+			System.out.println();
+		}
+	}
+
+	// Driver Function
+	public static void main(String args[])
+	{
+		int n = 5;
+		printStars(n);
+	}
+}
+Output
+           * 
+         * * 
+       * * * 
+     * * * * 
+   * * * * * 
+   
+   //palindrom
+class PalindromeExample{  
+ public static void main(String args[]){  
+  int r,sum=0,temp;    
+  int n=454;//It is the number variable to be checked for palindrome  
+  
+  temp=n;    
+  while(n>0){    
+   r=n%10;  //getting remainder  
+   sum=(sum*10)+r;    
+   n=n/10;    
+  }    
+  if(temp==sum)    
+   System.out.println("palindrome number ");    
+  else    
+   System.out.println("not palindrome");    
+}  
+}  
+Output:
+
+palindrome  number
